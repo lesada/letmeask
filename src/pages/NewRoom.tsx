@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom';
+
 import illustration from "../assets/images/illustration.svg";
 import logo from "../assets/images/logo.svg";
-import googleIcon from "../assets/images/google-icon.svg";
 
 import { Button } from "../components/Button";
 
@@ -22,7 +23,7 @@ export function NewRoom() {
             <input type="text" placeholder="Room name" />
             <Button type="submit">Create room</Button>
           </form>
-          <p>Do you want to enter a existing room? <a href="#">Click here</a></p>
+          <p>Do you want to enter a existing room? <Link to="/">Click here</Link></p>
         </div>
       </main>
     </div>
