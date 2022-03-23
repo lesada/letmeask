@@ -1,13 +1,19 @@
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+import { useAuth } from "../hooks/useAuth";
+
 
 import illustration from "../assets/images/illustration.svg";
 import logo from "../assets/images/logo.svg";
 
 import { Button } from "../components/Button";
 
-import '../styles/auth.scss';
+import "../styles/auth.scss";
 
 export function NewRoom() {
+  const {user} = useAuth();
+  console.log(user)
+  
   return (
     <div id="page-auth">
       <aside>
@@ -23,7 +29,9 @@ export function NewRoom() {
             <input type="text" placeholder="Room name" />
             <Button type="submit">Create room</Button>
           </form>
-          <p>Do you want to enter a existing room? <Link to="/">Click here</Link></p>
+          <p>
+            Do you want to enter a existing room? <Link to="/">Click here</Link>
+          </p>
         </div>
       </main>
     </div>
